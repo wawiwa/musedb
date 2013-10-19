@@ -125,7 +125,7 @@
 			<scope>test</scope>
 		</dependency>        
 		
-		<!-- To allow for JSON content type, otherwise 406 error -->
+		<!-- Added jackson libs to allow for JSON content type, otherwise 406 error -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
