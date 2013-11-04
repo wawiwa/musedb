@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.w3.org/1999/xlink" elementFormDefault="qualified" attributeFormDefault="qualified" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <xs:element name = "composition_collection">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "composition">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name = "title">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name ="main_title" type = "xs:string"/>
+                                            <xs:element name = "work_title" type = "xs:string"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name = "author">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name = "country" type = "xs:string"/>
+                                            <xs:element name = "alias" type = "xs:string"/>
+                                            <xs:element name = "id">
+                                                <xs:simpleType>
+                                                    <xs:restriction base = "xs:integer"/>
+                                                </xs:simpleType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name = "number">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                    <xs:element name = "id">
+                                        <xs:simpleType>
+                                            <xs:restriction base = "xs:integer"/>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    
+                                    <xs:element name = "main"/>
+                                    <xs:element name = "work"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>   
+                                <xs:element name = "key">
+                                 <xs:complexType>
+                                     <xs:sequence>
+                                         <xs:element name = "fifths">
+                                           <xs:simpleType>
+                                               <xs:restriction base = "xs:integer"/>
+                                           </xs:simpleType>
+                                         </xs:element>
+                                         <xs:element name = "mode">
+                                             <xs:simpleType>
+                                                 <xs:restriction base = "xs:string">
+                                                     <xs:enumeration value = "Lydian"/>
+                                                     <xs:enumeration value = "Major/Ionian"/>
+                                                     <xs:enumeration value = "Mixolydian"/>
+                                                     <xs:enumeration value = "Dorian"/>
+                                                     <xs:enumeration value = "N. Minor/Aeolian"/>
+                                                     <xs:enumeration value = "Phrygian"/>
+                                                     <xs:enumeration value = "Locrian"/>
+                                                 </xs:restriction>
+                                             </xs:simpleType>
+                                         </xs:element>
+                                       
+                                     </xs:sequence>
+                                 </xs:complexType>
+                                </xs:element>
+                                <xs:element name = "stylistic_era" type="xs:string"/>
+                                <xs:element name = "genre" type="xs:string"/>
+                                <xs:element name = "instrumentation">
+                                    <xs:simpleType>
+                                        
+                                        <xs:restriction base = "xs:string">
+                                            <xs:enumeration value = "scored"/>
+                                            <xs:enumeration value = "alternate"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                    
+                                    
+                                    <xs:element name = "instrument" type ="xs:string"/>
+                                    
+                            <xs:element name = "publisher">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name = "id">
+                                            <xs:simpleType>
+                                                <xs:restriction base = "xs:integer"/>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name = "name"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                                <xs:element name = "rating">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name = "style" type = "xs:integer"/>
+                                            <xs:element name = "technique" type = "xs:integer"/>
+                                            <xs:element name = "accompaniment" type = "xs:integer"/>
+                                            <xs:element name = "rhythm" type = "xs:integer"/>
+                                            <xs:element name = "flexibility" type = "xs:integer"/>
+                                            <xs:element name = "connections" type = "xs:integer"/>
+                                            <xs:element name = "range" type = "xs:integer"/>
+                                            <xs:element name = "comments" type = "xs:integer"/>
+                                            <xs:element name = "articulation" type = "xs:integer"/>
+                                            <xs:element name = "merit" type = "xs:integer"/>
+                                            <xs:element name = "user" type = "xs:string"/>
+                                       
+                                        </xs:sequence>
+                                        </xs:complexType>
+                                 </xs:element>
+                                
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence> 
+                        </xs:complexType>
+        </xs:element> 
+</xs:schema>
