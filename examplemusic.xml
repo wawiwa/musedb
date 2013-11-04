@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+<composition_collection>
+    <composition>
+        <title>
+            <main_title>Inventio 1</main_title>
+            <work_title>Zweistimmigen Inventionen</work_title>
+        </title>
+        <author>
+            <author type="composer">Johann Sebastian Bach</author>
+            <country> Germany </country>
+            <id> 55</id>
+            <alias> Home Boy</alias>
+        </author>
+        <number>
+            <id>5</id>
+            <main>BWV 772</main>
+            <work>BWV 772-786</work>
+        </number>
+        <key>C</key>
+        <stylistic_era>
+            <stylistic_era name="Baroque">
+            </stylistic_era>
+            <genre>
+                <genre type="beginning etude">
+                </genre>
+                <instrumentation type="scored"> 
+                    <instrument> trumpet </instrument>
+                    <instrument> piano </instrument>
+                    </instrumentation>
+                    <publisher>
+                        <id>55</id>
+                        <name>Publshing House</name>
+                    </publisher> 
+                    <rates>
+                        <style weight="100">25</style>
+                        <technique weight="100">25</technique>
+                        <accompaniment weight="100">25</accompaniment>
+                        <rhythm weight="100">25</rhythm>
+                        <flexibility weight="100">25</flexibility>
+                        <connections weight="100">25</connections>
+                        <range weight="100">25</range>
+                        <comments weight="100">25</comments>
+                        <articulation weight="100">25</articulation>
+                        <merit weight="100">25</merit>
+                        <user>Bob</user>
+                    </rates>
+                    <user level="expert" role="admin">
+                        <id>55</id>
+                        <name>Bob Schmob</name>
+                        <email_address>bobschmob@gmail.com</email_address>
+                        <institution>George Mason</institution>
+                    </user>
+                    <musicxml file="filename.xml">Bach's 9th Symphony</musicxml>
+    </composition>
+</composition_collection>
