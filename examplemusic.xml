@@ -2,22 +2,22 @@
 
 <composition_collection>
 	<composition>
-        <title>
-            <main_title>Inventio 1</main_title>
-            <work_title>Zweistimmigen Inventionen</work_title>
-        </title>
-        <author>
-            <author type="composer">Johann Sebastian Bach</author>
-            <country> Germany </country>
-            <id> 55</id>
-            <alias> Home Boy</alias>
-        </author>
-        <number>
-            <id>5</id>
-            <main>BWV 772</main>
-            <work>BWV 772-786</work>
-        </number>
-        <key>C</key>
+	        <title>
+	            <main_title>Inventio 1</main_title>
+	            <work_title>Zweistimmigen Inventionen</work_title>
+	        </title>
+	        <author>
+	            <author type="composer">Johann Sebastian Bach</author>
+	            <country> Germany </country>
+	            <id> 55</id>
+	            <alias> Home Boy</alias>
+	        </author>
+	        <number>
+	            <id>5</id>
+	            <main>BWV 772</main>
+	            <work>BWV 772-786</work>
+	        </number>
+	        <key>C</key>
 		<stylistic_era> Baroque </stylistic_era>
 		<genre> Beginning Etude </genre>
 		<instrumentation type="scored"> 
@@ -28,7 +28,7 @@
 			<id>55</id>
 			<name>Publshing House</name>
 		</publisher> 
- 		<ratings>
+	 	<ratings>
 			<rating>
 				<rater_ref>1</rater_ref>
 				<style weight="100">30</style>
