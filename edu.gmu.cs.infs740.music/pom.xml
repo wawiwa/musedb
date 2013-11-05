@@ -161,7 +161,11 @@
 	        <artifactId>exist</artifactId>
 	        <version>1.2.6</version>
       	</dependency>
-
+		<dependency>
+			<groupId>xmldb</groupId>
+			<artifactId>xmldb-api</artifactId>
+			<version>20021118</version>
+		</dependency>
 
 	</dependencies>
     <build>
