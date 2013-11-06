@@ -37,4 +37,5 @@ public class SearchController {
 		}		
 		return new ArrayList<Composition>();
 	}
+	
 }
