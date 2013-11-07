@@ -10,32 +10,38 @@
    <script type="text/javascript">
       function doGet()
       {
-    	  var resUrl = "http://localhost:8080/music/items/" + $("#param_inp").val();
+    	  var resUrl = "<%=request.getContextPath()%>/items/" + $("#param_inp").val();
 	      $.get(resUrl, showXML);
       }
       
       function doSearch()
       {
-    	  var resUrl = "http://localhost:8080/music/items/Find";
+    	  var resUrl = "<%=request.getContextPath()%>/items/Find";
 	      $.post(resUrl, $("#data_frm").serialize(), showXML);
       }
       
       function doGetJson()
       {
-    	  var resUrl = "http://localhost:8080/music/items/json/"  + $("#param_inp").val();
+    	  var resUrl = "<%=request.getContextPath()%>/json/"  + $("#param_inp").val();
 	      $.getJSON(resUrl, showJSON);
       }
       
       function doGetJson()
       {
-    	  var resUrl = "http://localhost:8080/music/items/json/"  + $("#param_inp").val();
+    	  var resUrl = "<%=request.getContextPath()%>/items/json/"  + $("#param_inp").val();
 	      $.getJSON(resUrl, showJSON);
       }
       
       function doSearchJson()
       {
-    	  var resUrl = "http://localhost:8080/music/items/json/Find";
+    	  var resUrl = "<%=request.getContextPath()%>/items/json/Find";
 	      $.post(resUrl, $("#data_frm").serialize(), showJSONList);
+      }
+      
+      function findByTitle()
+      {
+    	  var resUrl = "<%=request.getContextPath()%>/search/title";
+	      $.post(resUrl, $("#data_frm").serialize(), showCompositionList);
       }
       
       function showXML(xmlData) 
@@ -75,12 +81,34 @@
 		  $("#result_txt").html(htmlList);
       }
 	  
+      function showCompositionList(searchResult) 
+      {
+          var htmlList = "<table style='border-width:2px;border-style:solid;border-spacing:0;' width='600px'><caption><strong>List of Compositions</strong></caption>";
+          htmlList += "<thead><tr>";
+          htmlList += "<th style='border:1px solid;'>Main Title</th>";
+          htmlList += "<th style='border:1px solid;'>Work Title</th>";
+          htmlList += "<th style='border:1px solid;'>Publisher</th>";
+          htmlList += "</tr></thead>";
+          htmlList += "<tbody>";
+          for (var i = 0; i < searchResult.compositionList.length; i++) {
+              htmlList += "<tr>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult.mainTitle + "</td>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult.workTitle + "</td>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult.publisher + "</td>";
+              htmlList += "</tr>";
+          }
+          htmlList += "</tbody>";
+          htmlList += "</table>";
+		  $("#result_txt").html(htmlList);
+      }
+	  
       $(function() 
       {
         $("#doGet_btn").click(doGet);
         $("#doSearch_btn").click(doSearch);
         $("#doGetJson_btn").click(doGetJson);
         $("#doSearchJson_btn").click(doSearchJson);
+        $("#searchCompositions_btn").click(findByTitle);
       });
    </script>
 </head>
@@ -103,9 +131,13 @@
         <input id="doGetJson_btn" type="button" value="Get JSON Item" /><br/>
         <input id="doSearchJson_btn" type="button" value="Find JSON Items" /><br/>
       </p>
+      <p>
+        <label>Title:<input id="composer_inp" type="text" name="title" /></label>
+        <input id="searchCompositions_btn" type="button" value="Search Compositions" /><br/>
+      </p>
     </form>
-   <h3>Result:</h3>
    <hr/>
+   <h3>Result:</h3>
    <div id="result_txt"></div>
 </body>
 </html>
