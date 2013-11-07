@@ -1,10 +1,8 @@
 package edu.gmu.cs.infs740.music.Controller;
 
-<<<<<<< HEAD
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-||||||| merged common ancestors
-=======
 
 
 import java.util.ArrayList;
@@ -13,9 +11,6 @@ import java.util.List;
 import javax.xml.xquery.XQConnection;
 import javax.xml.xquery.XQDataSource;
 import javax.xml.xquery.XQException;
-
->>>>>>> 0587230fd110034e98ba1a170250ca3fcb00a646
-
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,14 +32,6 @@ import net.xqj.exist.ExistXQDataSource;
 
 @Controller
 public class SearchController {
-
-<<<<<<< HEAD
-//	Hey Reza, the existdb libs are loading properly now using the pom.
-//	Do Run As: maven:clean, then Run As: maven:install
-//	@RequestMapping(value = "/title", method = RequestMethod.POST, headers = {"Accept=text/xml, application/xml"})
-//	public @ResponseBody  findItems(@RequestParam String param) {
-//
-//	}
 	
 	private static final Logger logger = LoggerFactory.getLogger(SearchController.class);
 
