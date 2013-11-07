@@ -34,7 +34,7 @@ public class CompositionDAO extends AbstractDAO<Composition> {
 
 	public List<Composition> findByTitle(String title) {
 		String query = "for $composition in doc('/db/myrepo/ExampleMusic.xml')//composition ";
-		query += "where contains($composition/title/main_title,'" + title + "')";
+		query += "where contains($composition/title/main_title,\'" + title + "\')";
 		query += "return $composition";
 		
 		List<Composition> result = search(query);
