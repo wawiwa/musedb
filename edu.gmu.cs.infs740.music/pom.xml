@@ -22,16 +22,16 @@
 		<maven.tomcat.path>/${project.name}</maven.tomcat.path>
 	</properties>
 	<repositories>
-		<repository>
-		  <id>xqj</id>
-		  <name>XQJ Maven Repository</name>
-		  <url>http://xqj.net/maven</url>
-		</repository>
-		<repository>
-	        <id>thirdparty-releases</id>
-	        <name>JBoss Thirdparty Releases</name>
-	        <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-      </repository>
+<!-- 		<repository> -->
+<!-- 		  <id>xqj</id> -->
+<!-- 		  <name>XQJ Maven Repository</name> -->
+<!-- 		  <url>http://xqj.net/maven</url> -->
+<!-- 		</repository> -->
+<!-- 		<repository> -->
+<!-- 	        <id>thirdparty-releases</id> -->
+<!-- 	        <name>JBoss Thirdparty Releases</name> -->
+<!-- 	        <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url> -->
+<!--       </repository> -->
 	</repositories>
 
 	<dependencies>
@@ -162,17 +162,49 @@
 		</dependency>
 
 <!-- 		existdb -->
-		<dependency>
-	        <groupId>net.sf.existdb</groupId>
-	        <artifactId>exist</artifactId>
-	        <version>1.2.6</version>
-      	</dependency>
-		<dependency>
-			<groupId>xmldb</groupId>
-			<artifactId>xmldb-api</artifactId>
-			<version>20021118</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		  <groupId>net.xqj</groupId> -->
+<!-- 		  <artifactId>basex-xqj</artifactId> -->
+<!-- 		  <version>1.2.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		  <groupId>com.xqj2</groupId> -->
+<!-- 		  <artifactId>xqj2</artifactId> -->
+<!-- 		  <version>0.1.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		  <groupId>javax.xml.xquery</groupId> -->
+<!-- 		  <artifactId>xqj-api</artifactId> -->
+<!-- 		  <version>1.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 	        <groupId>net.sf.existdb</groupId> -->
+<!-- 	        <artifactId>exist</artifactId> -->
+<!-- 	        <version>1.2.6</version> -->
+<!--       	</dependency> -->
 
+<!-- 		<dependency> -->
+<!-- 		  <groupId>net.xqj</groupId> -->
+<!-- 		  <artifactId>exist-xqj</artifactId> -->
+<!-- 		  <version>1.0.1</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		  <groupId>net.xqj</groupId> -->
+<!-- 		  <artifactId>exist-xqj-examples</artifactId> -->
+<!-- 		  <version>1.0.1</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		  <groupId>net.xqj</groupId> -->
+<!--   		  <artifactId>xqjapi</artifactId> -->
+<!--   		  <version>1.0.1</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		  <groupId>net.xqj</groupId> -->
+<!--   		  <artifactId>xqj2</artifactId> -->
+<!-- 		  <version>0.0.1</version> -->
+<!-- 		</dependency> -->
+
+		
 	</dependencies>
     <build>
         <plugins>

@@ -1,22 +1,19 @@
 package edu.gmu.cs.infs740.music.Controller;
 
-import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import org.xmldb.api.base.*;
-import org.xmldb.api.modules.*;
-import org.xmldb.api.*;
-import javax.xml.transform.OutputKeys;
-import org.exist.xmldb.EXistResource;
+import javax.xml.xquery.*;
+import javax.xml.namespace.QName;
+import net.xqj.exist.ExistXQDataSource;
+
+
 
 
 @Controller
-@RequestMapping("/search")
 public class SearchController {
 
 //	Hey Reza, the existdb libs are loading properly now using the pom.
@@ -25,4 +22,47 @@ public class SearchController {
 //	public @ResponseBody  findItems(@RequestParam String param) {
 //
 //	}
+	
+	private static final Logger logger = LoggerFactory.getLogger(SearchController.class);
+
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public static String getConnection() throws Exception
+	{
+		logger.info("SearchController: ");
+	    XQDataSource xqs = new ExistXQDataSource();
+	    xqs.setProperty("serverName", "localhost");
+	    xqs.setProperty("port", "8899");
+
+	    XQConnection conn = xqs.getConnection();
+
+	    XQPreparedExpression xqpe =
+	      conn.prepareExpression("declare variable $x as xs:string external; $x");
+
+	    xqpe.bindString(new QName("x"), "Hello World!", null);
+
+	    XQResultSequence rs = xqpe.executeQuery();
+
+	    while(rs.next())
+	      System.out.println(rs.getItemAsString(null));
+	    
+	    String query = "for $composition in doc('/db/music/examplemusic.xml')//composition ";
+        query += "where contains($composition/title/main_title,\'" + "Inventio" + "\')";
+        query += "return $composition";
+        
+        XQPreparedExpression xqpe2 =
+      	      conn.prepareExpression(query);
+
+      	    //xqpe2.bindString(new QName("x"), "Hello World!", null);
+
+      	    XQResultSequence rs2 = xqpe2.executeQuery();
+
+      	    while(rs2.next())
+      	      System.out.println(rs2.getItemAsString(null));
+
+	    conn.close();
+	    
+
+	    return "index";
+	}
+
 }
