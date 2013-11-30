@@ -40,7 +40,8 @@
       
       function findByTitle()
       {
-    	  var resUrl = "<%=request.getContextPath()%>/search/title";
+    	  var resUrl = "<%=request.getContextPath()%>/composition/title";
+    	  //alert("hello: "+resUrl);
 	      $.post(resUrl, $("#data_frm").serialize(), showCompositionList);
       }
       
@@ -113,7 +114,7 @@
    </script>
 </head>
 <body>
-   <h1>Hey man!</h1>
+   <h1>Hey Dudes!</h1>
    <h2>A global community of friends and strangers spitting out their
    inner-most and personal thoughts on the web for everyone else to see.</h2>
 

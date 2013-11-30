@@ -30,7 +30,9 @@
 		    <beans:property name="favorPathExtension" value="false" />
 		</beans:bean>
 	  
-	<context:component-scan base-package="edu.gmu.cs.infs740.music.Controller" />
+	<context:component-scan base-package="org.musicalpatriots.service.controller" />
+	<context:component-scan base-package="org.musicalpatriots.service.endpoint" />
+	
 	
 	
 	

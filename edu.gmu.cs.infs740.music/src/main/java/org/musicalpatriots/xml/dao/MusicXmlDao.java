@@ -1,8 +1,8 @@
-package edu.gmu.cs.infs740.music.dao;
+package org.musicalpatriots.xml.dao;
 
 import java.util.List;
 
-public interface DataAccessObject<T> {
+public interface MusicXmlDao<T> {
 
 	public T findById(String id);
 	public List<T> findAll();

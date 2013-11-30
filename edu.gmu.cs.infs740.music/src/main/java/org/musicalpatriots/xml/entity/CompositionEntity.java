@@ -1,17 +1,17 @@
-package edu.gmu.cs.infs740.music.Model;
+package org.musicalpatriots.xml.entity;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Composition")
-public class Composition {
+public class CompositionEntity {
 	
 	private String mainTitle;
 	private String workTitle;
 	private String author;
 	private String publisher;
 	
-	public Composition() {}
+	public CompositionEntity() {}
 
 	@XmlElement
 	public String getMainTitle() {

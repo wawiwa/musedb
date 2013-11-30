@@ -1,4 +1,4 @@
-package edu.gmu.cs.infs740.music.Controller;
+package org.musicalpatriots.service.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class MenuController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(MenuController.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.

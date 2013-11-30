@@ -1,4 +1,4 @@
-package edu.gmu.cs.infs740.music.dao;
+package org.musicalpatriots.xml.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +10,11 @@ import javax.xml.xquery.XQSequence;
 
 import org.w3c.dom.Element;
 
-public abstract class AbstractDAO<T> implements DataAccessObject<T> {
+public abstract class AbstractDao<T> implements MusicXmlDao<T> {
 
 	protected XQConnection conn;
 	
-	public AbstractDAO(XQConnection conn) {
+	public AbstractDao(XQConnection conn) {
 		this.conn = conn;
 	}
 	
