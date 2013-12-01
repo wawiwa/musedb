@@ -42,10 +42,10 @@
 
   <p style="text-align:left">&nbsp;</p>
   <p style="text-align:left">Username:
-    <input type="text" name="Username2" id="Username2" />
+    <input type="text" name="j_username" id="Username2" />
   </p>
   <p>Password:
-    <input type="text" name="Username3" id="Username3" />
+    <input type="text" name="j_password" id="Username3" />
   </p>
   <p><a href="E:\INFS 740\Group Project\musicui\findpassword.html">Forget passwords?</a></p>
   <p>&nbsp;</p>
