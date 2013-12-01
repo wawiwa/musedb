@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns:mvc="http://www.springframework.org/schema/mvc"
+<beans:beans 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	
 
 			<!-- Added 3.2 to schema locations above -->
 		
@@ -26,14 +31,14 @@
 	<!-- Additional disabling the getting of media type based on the extension of the requested path.  -->
 	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>
 		<beans:bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
-		    <!-- Turn off working out content type based on URL file extension, should fall back to looking at the Accept headers -->
+<!-- 		    Turn off working out content type based on URL file extension, should fall back to looking at the Accept headers -->
 		    <beans:property name="favorPathExtension" value="false" />
 		</beans:bean>
 	  
 	<context:component-scan base-package="org.musicalpatriots.service.controller" />
 	<context:component-scan base-package="org.musicalpatriots.service.endpoint" />
 	
-	
+	<security:global-method-security secured-annotations="enabled" pre-post-annotations="enabled" />
 	
 	
 </beans:beans>
