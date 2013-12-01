@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 public class DomainLogic {
-	
+        
     public List<CompositionEntity> findByTitle (String title) {
             try {
                     XQDataSource xqs = new ExistXQDataSource();

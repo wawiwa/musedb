@@ -36,6 +36,10 @@ public class MenuController {
 		
 		return "hello";
 	}
+	@RequestMapping(value = "/")
+	public String home() {
+		return "welcome";
+	}
 	
 	@RequestMapping(value = "/success")
 	public String success() {

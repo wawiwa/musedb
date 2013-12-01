@@ -28,9 +28,9 @@
   <div class="contentcontainer" style="margin-top:100px; width:950px">
     <div>
      <ul class="jq-menu">
-       <li><a href="userlogin.html"><font color="#FF9900">User Login </font></a></li>
-           <li><a href="registration.html"><font color="#FF9900">Registration</font></a></li>
-           <li><a href="musicsearch.html"><font color="#FF9900">Music Search</font></a></li>
+       <li><a href="<s:url value="/login/signin"/>"><font color="#FF9900">Show User Login </font></a></li>
+           <li><a href="registration.jsp"><font color="#FF9900">Registration</font></a></li>
+           <li><a href="musicsearch.jsp"><font color="#FF9900">Music Search</font></a></li>
       </ul>
     </div>
         

@@ -20,6 +20,7 @@
  		<maven.tomcat.update>true</maven.tomcat.update>
 <!--  		<maven.tomcat.path>/${project.build.finalName}</maven.tomcat.path> -->
 		<maven.tomcat.path>/${project.name}</maven.tomcat.path>
+	
 	</properties>
 	<repositories>
 <!-- 		<repository> -->
@@ -32,9 +33,40 @@
 <!-- 	        <name>JBoss Thirdparty Releases</name> -->
 <!-- 	        <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url> -->
 <!--       </repository> -->
+
+	<!-- In Project repository -->
+	    <repository>
+	        <id>project.local</id>
+	        <name>project</name>
+	        <url>file:${project.basedir}/repo</url>
+	    </repository>
 	</repositories>
 
 	<dependencies>
+		
+		<!-- Exist -->
+		<dependency>
+		  <groupId>net.xqj</groupId>
+		  <artifactId>xqjapi</artifactId>
+		  <version>1.0</version>
+  		</dependency>
+  		<dependency>
+			<groupId>net.exist</groupId>
+			<artifactId>exist-xqj-examples</artifactId>
+			<version>1.0.1</version>
+  		</dependency>
+  		<dependency>
+  		  <groupId>net.exist</groupId>
+		  <artifactId>exist-xqj</artifactId>
+		  <version>1.0.1</version>
+  		</dependency>
+  		<dependency>
+  		  <groupId>com.xqj2</groupId>
+		  <artifactId>xqj2</artifactId>
+		  <version>0.0.1</version>
+  		</dependency>
+	
+
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
