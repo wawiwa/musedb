@@ -84,6 +84,13 @@
 	  
       function showCompositionList(searchResult) 
       {
+    	  //alert("CL called");
+    	  if($.isEmptyObject(searchResult)) {
+    		  //alert("in if st");
+    		  $("#result_txt").html("<h3> No results matched your query. </h3>");
+    		  return;
+    	  }
+    	  //alert("CL length: "+searchResult.length);
           var htmlList = "<table style='border-width:2px;border-style:solid;border-spacing:0;' width='600px'><caption><strong>List of Compositions</strong></caption>";
           htmlList += "<thead><tr>";
           htmlList += "<th style='border:1px solid;'>Main Title</th>";
@@ -91,11 +98,11 @@
           htmlList += "<th style='border:1px solid;'>Publisher</th>";
           htmlList += "</tr></thead>";
           htmlList += "<tbody>";
-          for (var i = 0; i < searchResult.compositionList.length; i++) {
+          for (var i = 0; i < searchResult.length; i++) {
               htmlList += "<tr>";
-              htmlList += "<td style='border:1px solid;'>" + searchResult.mainTitle + "</td>";
-              htmlList += "<td style='border:1px solid;'>" + searchResult.workTitle + "</td>";
-              htmlList += "<td style='border:1px solid;'>" + searchResult.publisher + "</td>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult[i].mainTitle + "</td>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult[i].workTitle + "</td>";
+              htmlList += "<td style='border:1px solid;'>" + searchResult[i].publisher + "</td>";
               htmlList += "</tr>";
           }
           htmlList += "</tbody>";
@@ -119,6 +126,8 @@
    inner-most and personal thoughts on the web for everyone else to see.</h2>
 
 	<p>  The time on the server is ${serverTime}. </p>
+	
+	<p><a href="<s:url value="/login/signin"/>">Sign in</a></p>
 
    <b>Click here to look at what these people are spitting right now...</b>
 

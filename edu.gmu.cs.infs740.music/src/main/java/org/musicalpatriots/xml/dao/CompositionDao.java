@@ -32,7 +32,7 @@ public class CompositionDao extends AbstractDao<CompositionEntity> {
 	}
 
 	public List<CompositionEntity> findByTitle(String title) {
-		String query = "for $composition in doc('/db/music/musicxml/file10.xml')/composition_collection/composition ";
+		String query = "for $composition in doc('/db/music/musicxml/CompositionCollection.xml')/composition_collection/composition ";
 		query += "where contains($composition/title/main_title,\'" + title + "\')";
 		query += "return $composition";
 		

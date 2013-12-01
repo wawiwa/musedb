@@ -30,8 +30,8 @@ public class DomainLogic {
                     CompositionDao dao = new CompositionDao(conn);
                     
                     List<CompositionEntity> searchResult = dao.findByTitle(title);
-                    System.out.println("search result count:" + searchResult.size());
-                    System.out.println("search result title:" + searchResult.get(0).getMainTitle());
+                    //System.out.println("search result count:" + searchResult.size());
+                    //System.out.println("search result title:" + searchResult.get(0).getMainTitle());
                     
                     return searchResult;
             } catch (XQException ex) {

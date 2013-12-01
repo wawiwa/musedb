@@ -45,7 +45,7 @@ public class HibernateTest {
 		}
 
 		
-		String sql = "insert into user2 (username,full_name,password) values ('jim','bobo','cake');";
+		String sql = "insert into user (username,full_name,password) values ('jim','bobo','cake');";
 		
 		
 //		user.setFullName("Harry Barry");

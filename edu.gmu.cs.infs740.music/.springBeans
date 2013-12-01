@@ -7,6 +7,8 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
+		<config>src/main/java/datasource-context.xml</config>
+		<config>src/main/java/persistence-context.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
